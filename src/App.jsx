@@ -9,7 +9,7 @@ function App() {
 
   // 도서 목록을 가져오는 함수
   const fetchBooks = async () => {
-    const response = await axios.get("https://www.sist123.store/api/books");
+    const response = await axios.get("http://www.sist123.store:8080/api/books");
     setBooks(response.data);
   };
 

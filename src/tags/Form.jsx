@@ -25,7 +25,7 @@ let Form = ({ onBookAdded }) => {
         }
 
         try {
-            await axios.post("https://www.sist123.store/api/book", book);
+            await axios.post("http://www.sist123.store/api/book", book);
             setBook({ no: "0", title: "", qty: "", price: "", publisher: "" }); // 폼 초기화
             onBookAdded(); // 도서 목록을 갱신하는 함수 호출
         } catch (error) {

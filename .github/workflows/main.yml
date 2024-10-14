@@ -49,4 +49,5 @@ jobs:
             docker pull ${{ secrets.DOCKER_USER }}/react-app
             docker stop react-app || true
             docker rm react-app || true
-            docker run -d --name react-app --network mynet -p 80:80 ${{ secrets.DOCKER_USER }}/react-app
+            # 변경: 3000 포트를 컨테이너의 80 포트와 매핑
+            docker run -d --name react-app --network mynet -p 80:3000 ${{ secrets.DOCKER_USER }}/react-app
